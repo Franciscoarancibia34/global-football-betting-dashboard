@@ -12,7 +12,7 @@ This is an analytical tool only. It does not place bets, automate gambling, scra
 
 - GitHub repo: `https://github.com/Franciscoarancibia34/global-football-betting-dashboard`
 - Live demo: `TODO: paste deployment URL if available`
-- Demo video or screenshots: `TODO: paste link if required`
+- Screenshots: `screenshots/dashboard-txline-live-desktop.png`, `screenshots/dashboard-txline-live-mobile.png`
 
 ## What I Built
 

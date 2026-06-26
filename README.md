@@ -65,6 +65,16 @@ La respuesta debe incluir:
 }
 ```
 
+### Screenshots
+
+Desktop:
+
+![TxLINE live desktop dashboard](screenshots/dashboard-txline-live-desktop.png)
+
+Mobile:
+
+![TxLINE live mobile dashboard](screenshots/dashboard-txline-live-mobile.png)
+
 ## Desarrollo local
 
 ```bash
