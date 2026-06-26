@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --radius: 8px;
+  --background: 250 250 247;
+  --foreground: 20 24 33;
+  --muted: 239 241 245;
+  --muted-foreground: 92 99 112;
+  --border: 217 222 232;
+  --card: 255 255 255;
+  --accent: 0 166 118;
+  --accent-2: 38 112 255;
+  --danger: 220 38 38;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: 10 13 20;
+  --foreground: 241 245 249;
+  --muted: 26 32 44;
+  --muted-foreground: 148 163 184;
+  --border: 45 55 72;
+  --card: 16 21 32;
+  --accent: 45 212 191;
+  --accent-2: 125 211 252;
+  --danger: 248 113 113;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.risk-cell {
+  background: color-mix(in srgb, rgb(var(--danger)) calc(var(--risk) * 100%), rgb(var(--accent)) 25%);
+}
