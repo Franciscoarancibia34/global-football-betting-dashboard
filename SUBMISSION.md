@@ -10,7 +10,7 @@ This is an analytical tool only. It does not place bets, automate gambling, scra
 
 ## Links
 
-- GitHub repo: `TODO: paste public repository URL`
+- GitHub repo: `https://github.com/Franciscoarancibia34/global-football-betting-dashboard`
 - Live demo: `TODO: paste deployment URL if available`
 - Demo video or screenshots: `TODO: paste link if required`
 
@@ -117,4 +117,3 @@ It does not automate betting execution. Users must manually evaluate opportuniti
 - Multi-bookmaker arbitrage scanner.
 - Team/league filters optimized for World Cup workflows.
 - Hosted demo with secrets managed through deployment environment variables.
-
