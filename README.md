@@ -75,6 +75,10 @@ Mobile:
 
 ![TxLINE live mobile dashboard](screenshots/dashboard-txline-live-mobile.png)
 
+### Demo Video
+
+[Watch the TxLINE dashboard demo](videos/txline-dashboard-demo.webm)
+
 ## Desarrollo local
 
 ```bash
