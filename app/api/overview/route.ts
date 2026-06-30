@@ -18,7 +18,7 @@ export async function GET() {
       orderBy: { createdAt: "desc" }
     });
   } catch {
-    bets = [{ status: "OPEN", profit: 0, stake: 20 }];
+    bets = [];
   }
 
   const activeBets = bets.filter((bet) => bet.status === "OPEN");
@@ -37,8 +37,8 @@ export async function GET() {
       realizedRoi: 0.071,
       expectedRoi,
       aggregateRisk: 0.18 + exposure / Math.max(1, Number(user.bankroll)) / 2,
-      totalExposure: exposure || 182.5,
-      activeBets: activeBets.length || 8
+      totalExposure: exposure,
+      activeBets: activeBets.length
     },
     charts: {
       bankroll: equity.map((value, index) => ({ label: `D${index + 1}`, bankroll: value, pnl: value - 1000 })),
