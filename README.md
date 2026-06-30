@@ -224,6 +224,8 @@ Videos adicionales:
 - [World Cup Live Pulse demo](videos/world-cup-live-pulse-demo.webm)
 - [Prediction Market Settlement Watch demo](videos/prediction-market-settlement-demo.webm)
 
+Para publicar un MVP accesible por los jueces, ver `DEPLOYMENT.md`. Para copiar campos a Superteam, ver `SUBMISSION_LINKS.md`.
+
 ### The Odds API
 
 Si defines `THE_ODDS_API_KEY`, el endpoint `/api/odds/live` cambia automaticamente de `MockGlobalOdds` a `TheOddsAPI`.
