@@ -26,13 +26,7 @@ Use the deployed URL if available. For local demo:
 
 ## Live Demo Video
 
-Record a short 60-90 second demo showing:
-
-1. Open `/settlement`.
-2. Show the TxLINE live/provider badge.
-3. Explain the Ready / Watch / Review queue.
-4. Open one market row and explain why a strong move would require manual review.
-5. Mention that the demo does not move funds or execute settlement.
+`https://github.com/Franciscoarancibia34/global-football-betting-dashboard/blob/main/videos/prediction-market-settlement-demo.webm`
 
 ## Public Repository
 

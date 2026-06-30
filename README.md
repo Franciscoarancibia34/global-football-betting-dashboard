@@ -219,6 +219,11 @@ Para el track de experiencia de consumidor, este repositorio incluye `PULSE_SUBM
 
 Para el track de prediction markets, este repositorio incluye `SETTLEMENT_SUBMISSION.md` con un texto separado para presentar `Prediction Market Settlement Watch`.
 
+Videos adicionales:
+
+- [World Cup Live Pulse demo](videos/world-cup-live-pulse-demo.webm)
+- [Prediction Market Settlement Watch demo](videos/prediction-market-settlement-demo.webm)
+
 ### The Odds API
 
 Si defines `THE_ODDS_API_KEY`, el endpoint `/api/odds/live` cambia automaticamente de `MockGlobalOdds` a `TheOddsAPI`.

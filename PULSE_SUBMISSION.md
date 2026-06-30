@@ -18,13 +18,7 @@ Use the deployed URL if available. For local demo:
 
 ## Live Demo Video
 
-Record a short 60-90 second demo showing:
-
-1. Open `/pulse`.
-2. Show the live status badge and TxLINE provider.
-3. Explain the hottest match card.
-4. Show the pulse score, strongest odds movement, best EV signal, and responsible-use disclaimer.
-5. Refresh once to show the live update loop.
+`https://github.com/Franciscoarancibia34/global-football-betting-dashboard/blob/main/videos/world-cup-live-pulse-demo.webm`
 
 ## Public Repository
 
