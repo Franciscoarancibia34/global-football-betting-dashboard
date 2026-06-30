@@ -77,7 +77,7 @@ Mobile:
 
 ### Demo Video
 
-[Watch the TxLINE dashboard demo](videos/txline-dashboard-demo.webm)
+[Watch the TxLINE dashboard demo](txline-dashboard-demo.webm)
 
 ## Desarrollo local
 
@@ -185,7 +185,7 @@ Esto permite trabajar sin bloquear el desarrollo y pasar a datos reales cuando h
 
 ### TxLINE / TxODDS World Cup Hackathon
 
-La app esta preparada para el hackathon World Cup de TxODDS en Superteam Earn. El track mas alineado es `Trading Tools and Agents`, porque el producto monitorea odds, detecta senales y calcula riesgo/stake de forma programatica.
+La app esta preparada para el hackathon World Cup de TxODDS en Superteam Earn. El track mas alineado es `Trading Tools and Agents`, porque el producto monitorea odds, detecta senales y calcula riesgo/stake de forma programatica. La vista `TxLINE Agent Signal` convierte el feed en una senal explicable basada en movimiento de cuota, EV y confianza.
 
 Flujo para activar datos TxLINE:
 

@@ -6,6 +6,7 @@ import {
   AlertTriangle,
   BarChart3,
   Bell,
+  Bot,
   Download,
   Gauge,
   LineChart,
@@ -260,6 +261,72 @@ function AlertsPanel({ alerts }: { alerts: DashboardAlert[] }) {
             </div>
           </div>
         ))}
+      </div>
+    </Card>
+  );
+}
+
+function AgentSignalPanel({ odds }: { odds: LiveOdd[] }) {
+  const signal = useMemo(() => {
+    const candidates = odds
+      .filter((odd) => odd.decimalOdds >= 1.01 && odd.decimalOdds <= 25)
+      .map((odd) => {
+        const movementScore = Math.abs(odd.changePct);
+        const valueScore = Math.max(0, odd.ev);
+        const confidence = Math.min(0.99, movementScore * 4 + valueScore * 2 + 0.35);
+        return {
+          odd,
+          score: movementScore * 2 + valueScore,
+          movementScore,
+          valueScore,
+          confidence
+        };
+      })
+      .sort((a, b) => b.score - a.score);
+
+    return candidates[0];
+  }, [odds]);
+
+  if (!signal) {
+    return (
+      <Card className="p-4">
+        <div className="flex items-center gap-2">
+          <Bot className="h-5 w-5 text-[rgb(var(--accent-2))]" />
+          <h2 className="text-lg font-bold">TxLINE Agent Signal</h2>
+        </div>
+        <p className="mt-3 text-sm text-[rgb(var(--muted-foreground))]">Esperando feed TxLINE para generar una senal automatica.</p>
+      </Card>
+    );
+  }
+
+  const { odd, confidence, movementScore, valueScore } = signal;
+  const direction = odd.changePct > 0 ? "subio" : odd.changePct < 0 ? "cayo" : "se mantuvo";
+  const action = odd.ev > 0.05 && movementScore > 0.02 ? "investigar ahora" : odd.ev > 0 ? "poner en watchlist" : "solo monitorear";
+
+  return (
+    <Card className="border-[rgb(var(--accent-2))]/40 bg-sky-50 p-4 dark:bg-sky-950/20">
+      <div className="mb-3 flex items-start justify-between gap-3">
+        <div>
+          <div className="flex items-center gap-2">
+            <Bot className="h-5 w-5 text-[rgb(var(--accent-2))]" />
+            <h2 className="text-lg font-bold">TxLINE Agent Signal</h2>
+          </div>
+          <p className="mt-1 text-sm text-[rgb(var(--muted-foreground))]">Agente deterministico que resume el movimiento mas accionable del feed.</p>
+        </div>
+        <Badge className={action === "investigar ahora" ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300" : ""}>
+          {action}
+        </Badge>
+      </div>
+      <div className="rounded-md border border-[rgb(var(--border))] bg-[rgb(var(--card))] p-3 text-sm">
+        <p className="font-semibold">{odd.homeTeam} vs {odd.awayTeam}</p>
+        <p className="mt-1 text-[rgb(var(--muted-foreground))]">
+          {odd.market} / {odd.selection}: la cuota {direction} {pct(Math.abs(odd.changePct))} y el modelo marca EV {pct(odd.ev)}.
+        </p>
+      </div>
+      <div className="mt-3 grid gap-2 text-sm sm:grid-cols-3 xl:grid-cols-1">
+        <Badge>Confianza {pct(confidence)}</Badge>
+        <Badge>Movimiento {pct(movementScore)}</Badge>
+        <Badge>Value score {pct(valueScore)}</Badge>
       </div>
     </Card>
   );
@@ -624,6 +691,7 @@ export default function Home() {
               </Card>
             </div>
             <aside className="space-y-4">
+              <AgentSignalPanel odds={odds} />
               <AlertsPanel alerts={alerts} />
               <StakeSimulator />
             </aside>

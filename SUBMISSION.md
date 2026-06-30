@@ -11,7 +11,7 @@ This is an analytical tool only. It does not place bets, automate gambling, scra
 ## Links
 
 - GitHub repo: `https://github.com/Franciscoarancibia34/global-football-betting-dashboard`
-- Live demo video: `https://github.com/Franciscoarancibia34/global-football-betting-dashboard/blob/main/videos/txline-dashboard-demo.webm`
+- Live demo video: `https://github.com/Franciscoarancibia34/global-football-betting-dashboard/blob/main/txline-dashboard-demo.webm`
 - Technical documentation: `https://github.com/Franciscoarancibia34/global-football-betting-dashboard/blob/main/README.md`
 - Screenshots: `https://github.com/Franciscoarancibia34/global-football-betting-dashboard/tree/main/screenshots`
 
@@ -22,6 +22,7 @@ I built a full-stack dashboard that connects to TxLINE/TxODDS and transforms liv
 - Live odds table with market, bookmaker, selection, odds, normalized probability, and EV.
 - TxLINE provider integration with fallback provider architecture.
 - Radar panel to compare market reference odds with a manually entered bookmaker quote.
+- TxLINE Agent Signal panel that ranks the most actionable live odds movement and explains the deterministic reasoning.
 - Risk Lab for EV, expected ROI, Kelly stake sizing, exposure, and best/worst-case outcomes.
 - Responsible-gaming module with exposure limits and a visible legal disclaimer.
 - Alerts panel for value opportunities and odds movement.
@@ -62,6 +63,7 @@ Provider selection is automatic:
 - **Data:** PostgreSQL + Prisma schema for users, bookmakers, leagues, teams, matches, markets, odds snapshots, bets, bankroll events, alerts, model probabilities, and risk metrics.
 - **Realtime:** Socket.IO live update channel.
 - **Provider Architecture:** `OddsProvider` interface with `fetchLeagues`, `fetchFixtures`, `fetchOdds`, and `subscribeLiveOdds`.
+- **Agent Logic:** deterministic movement/value scoring that turns the live feed into an explainable agent signal.
 - **Resilience:** API fallbacks for slow DB responses, CSV export fallback, mock odds fallback if external providers fail.
 - **Testing:** Vitest unit tests and Playwright smoke test.
 
