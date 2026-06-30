@@ -187,6 +187,8 @@ Esto permite trabajar sin bloquear el desarrollo y pasar a datos reales cuando h
 
 La app esta preparada para el hackathon World Cup de TxODDS en Superteam Earn. El track mas alineado es `Trading Tools and Agents`, porque el producto monitorea odds, detecta senales y calcula riesgo/stake de forma programatica. La vista `TxLINE Agent Signal` convierte el feed en una senal explicable basada en movimiento de cuota, EV y confianza.
 
+Tambien incluye una segunda experiencia candidata para el track `Consumer and Fan Experiences`: [World Cup Live Pulse](/pulse). Esta vista transforma el mismo feed TxLINE en una interfaz para fans, con ranking de partidos calientes, narrativas en lenguaje simple, momentum de mercado y explicaciones responsables sin ejecutar apuestas.
+
 Flujo para activar datos TxLINE:
 
 1. Entrar a la documentacion de TxLINE World Cup Free Tier.
@@ -210,6 +212,8 @@ Submission sugerida para Superteam:
 - Documentacion tecnica breve con endpoints usados y feedback de la API.
 
 Este repositorio incluye `SUBMISSION.md` con un texto listo para adaptar al formulario de Superteam.
+
+Para el track de experiencia de consumidor, este repositorio incluye `PULSE_SUBMISSION.md` con un texto separado para presentar `World Cup Live Pulse`.
 
 ### The Odds API
 
