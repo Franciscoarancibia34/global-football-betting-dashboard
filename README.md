@@ -189,6 +189,8 @@ La app esta preparada para el hackathon World Cup de TxODDS en Superteam Earn. E
 
 Tambien incluye una segunda experiencia candidata para el track `Consumer and Fan Experiences`: [World Cup Live Pulse](/pulse). Esta vista transforma el mismo feed TxLINE en una interfaz para fans, con ranking de partidos calientes, narrativas en lenguaje simple, momentum de mercado y explicaciones responsables sin ejecutar apuestas.
 
+Para el track `Prediction Markets and Settlement`, la ruta [Prediction Market Settlement Watch](/settlement) reutiliza TxLINE como capa de verificacion: cola de mercados, flags de revision, confianza de settlement y deteccion de movimientos bruscos antes de cualquier resolucion.
+
 Flujo para activar datos TxLINE:
 
 1. Entrar a la documentacion de TxLINE World Cup Free Tier.
@@ -214,6 +216,8 @@ Submission sugerida para Superteam:
 Este repositorio incluye `SUBMISSION.md` con un texto listo para adaptar al formulario de Superteam.
 
 Para el track de experiencia de consumidor, este repositorio incluye `PULSE_SUBMISSION.md` con un texto separado para presentar `World Cup Live Pulse`.
+
+Para el track de prediction markets, este repositorio incluye `SETTLEMENT_SUBMISSION.md` con un texto separado para presentar `Prediction Market Settlement Watch`.
 
 ### The Odds API
 
